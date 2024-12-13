@@ -27,7 +27,7 @@ def plot_graph_seaborn(filename):
     sns.lineplot(x=grid_M_viz, y=derivative_analytics, label='analyt', linewidth=2, zorder=1)
     sns.scatterplot(x=grid_h, y=derivative_in_h, s=50, label='h', marker='o', zorder=2, color='purple')
     sns.scatterplot(x=grid_h_2, y=derivative_in_h_2, s=40, label='h_2', marker='o', zorder=3, color='red')
-    sns.scatterplot(x=grid_h_2, y=updated_runge, s=30, label='runge', marker='o', zorder=4, color='green')
+    sns.scatterplot(x=grid_h, y=updated_runge, s=30, label='runge', marker='o', zorder=4, color='green')
 
     # Настройки графика
     plt.xlabel("X", fontsize=14)
