@@ -129,11 +129,11 @@ const T* gen_derivative_func(const T* grid_fun, const std::size_t count_nodes, c
     if (count_nodes < 2) throw std::invalid_argument("Invalid count_nodes");
 
     T* grid_derivative = new T[count_nodes]{};
-    grid_derivative[0] = (-3*grid_fun[0] + 4*grid_fun[1] - grid_fun[2]) / (2 * step); //Формула для самой левой точки
+    grid_derivative[0] = (-3.0*grid_fun[0] + 4.0*grid_fun[1] - grid_fun[2]) / (2.0 * step); //Формула для самой левой точки
     for (std::size_t i = 1; i < count_nodes - 1; i++){
         grid_derivative[i] = (grid_fun[i + 1] - grid_fun[i - 1]) / (2 * step); //Формула центральных разностей
     }
-    grid_derivative[count_nodes-1] = (3*grid_fun[count_nodes-1] - 4*grid_fun[count_nodes-2] + grid_fun[count_nodes-3]) / (2 * step);
+    grid_derivative[count_nodes-1] = (3.0*grid_fun[count_nodes-1] - 4.0*grid_fun[count_nodes-2] + grid_fun[count_nodes-3]) / (2.0 * step);
     return grid_derivative;
 }
 /**

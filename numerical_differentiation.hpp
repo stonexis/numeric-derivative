@@ -3,15 +3,15 @@
 
 namespace Task_const {
     /// Редактируемые параметры
-    inline constexpr long double A = -5.2; ///Концы отрезка
-    inline constexpr long double B = 3.631; ///Концы отрезка
-    inline constexpr std::size_t M = 15; ///Количество узлов сетки
+    inline constexpr long double A = -4.0; ///Концы отрезка
+    inline constexpr long double B = 4.0; ///Концы отрезка
+    inline constexpr std::size_t M = 30; ///Количество узлов сетки
     inline constexpr std::size_t M_viz_ratio = 20; ///Количество раз, во сколько измельчить сетку, для отображения графика
 
     /// Нередактируемые параметры 
     inline constexpr std::size_t M_2 = M*2 - 1; /// Количество узлов сетки h/2
-    inline constexpr long double H = std::abs(B-A)/(M-1); ///Шаг равномерной сетки
-    inline constexpr long double STEP_H_2 = Task_const::H / 2; /// Шаг сетки h/2 
+    inline const long double H = std::abs(B-A)/(M-1); ///Шаг равномерной сетки
+    inline const long double STEP_H_2 = Task_const::H / 2; /// Шаг сетки h/2 
 }
 
 template <typename T>
